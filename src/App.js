@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+/* react */
+import {React} from "react"
+/* composants  */
+import Header from './components/Header/Header'
 
-function App() {
+
+/* css  */
+import './styles/normalize.css'
+import './styles/global.css'
+
+/* logo */
+import logoHeader from "./assets/Wealth_Health.jpg"
+
+
+const arrayNav = [{ linkNav: "/", titleNav: "Create Employee" },
+                  { linkNav: "/list", titleNav: "View Current Employees" }]
+
+//  const arrayNav = [{ linkNav: "/", titleNav: "Accueil" },
+//  { linkNav: "/about", titleNav: "A Propos"},
+// { linkNav: "/about", titleNav: "Test" }]
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    /* <></> évite de rajouter un noeud suppémentaire au DOM */
+    <>  
+      {/* en-tête identique pour chaque page */}   
+      <Header picture={logoHeader} linkPicture="/" arrayNav={arrayNav}
+       formatting="header" /> 
+        {/* exemple formatting = "smallHeader" */}
+    </>
+  )
 }
 
-export default App;

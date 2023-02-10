@@ -1,0 +1,116 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.container__header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	width: 100%;
+	padding: 40px 100px 13px 100px;
+}
+.header{
+	color: var(--primary-color);
+}
+.container__header.smallHeader {
+	width: 55%;
+}
+.header__logo{
+	width:50%;
+}
+.header__logo.smallHeader{
+	width: 105px;
+	height: 34px;
+}
+.header__nav__ul--li.smallHeader{
+	font-size: 0.7rem;
+}
+.link {
+	text-decoration:none;
+	outline: none;
+	color: var(--primary-color);
+}
+.navLink_active{
+	text-decoration:underline;
+	color: var(--primary-color);
+}
+.header__nav__ul{
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.header__nav__ul--li{
+	padding-left: 35px;
+	margin-top: 17px;
+	font-style: normal;	
+	font-weight: 500;
+	line-height: 34.22px;
+	color: var(--primary-color);
+}
+
+.title{
+	font-weight: 600;
+	position: absolute;
+}
+
+
+@media screen and (min-width: 996px) {
+	.container__header{
+		padding: 5px;
+	}
+	.header__nav__ul--li{
+		font-size: 1rem;
+	}
+	.title{
+		font-size: 1.5rem;
+		top: 20px;
+		left: 150px;
+	}
+
+}
+
+@media screen and (min-width:668px) and (width < 996px){
+	.container__header{
+		padding: 5px;
+	}
+	.header__nav__ul--li{
+		font-size: 0.8rem;
+	}
+	.title{
+		font-size: 1.1rem;
+		top: 50px;
+		left: 150px;
+	}
+}
+
+@media screen and (width < 668px) {
+	.container__header {
+		padding: 3px;
+	}
+	.header__logo{
+		width: 50px;
+	}
+	.header__nav__ul--li{
+		font-size: 0.75rem;
+		padding-left: 10px;
+		line-height: 17.11px;
+	}
+	.title{
+		font-size: 1rem;
+		top: 5px;
+		left: 120px;
+	}
+
+}
