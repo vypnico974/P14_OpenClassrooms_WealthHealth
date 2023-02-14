@@ -15,7 +15,8 @@ export default function Header({picture,linkPicture,arrayNav,formatting}) {
         <img className={`${styles.header__logo} ${styles[formatting]}`} src={picture} alt="Logo" />
       </Link> 
       }
-      <p className={styles.title}>HRnet</p>
+      <p className={styles.title_logo}>WEALT HEALTH</p>
+      <p className={styles.title}>HRnet   </p>
       <nav>   
         <ul className={styles.header__nav__ul}>
         {arrayNav.map((nav, index) => (

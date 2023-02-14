@@ -14,6 +14,8 @@
 	        justify-content: space-between;
 	width: 100%;
 	padding: 40px 100px 13px 100px;
+	border-bottom: 1px solid;
+	border-color: #6c8312;
 }
 .header{
 	color: var(--primary-color);
@@ -22,7 +24,11 @@
 	width: 55%;
 }
 .header__logo{
-	width:50%;
+	width: 110px;
+	height: 105px;
+}
+.header__logo:hover{
+	transform:scale(1.1);
 }
 .header__logo.smallHeader{
 	width: 105px;
@@ -53,16 +59,29 @@
 }
 .header__nav__ul--li{
 	padding-left: 35px;
-	margin-top: 17px;
+	margin-top: 40px;
 	font-style: normal;	
 	font-weight: 500;
 	line-height: 34.22px;
 	color: var(--primary-color);
 }
 
-.title{
-	font-weight: 600;
+.header__nav__ul--li:hover{
+	transform:scale(1.2);
+}
+
+.title_logo{
+	/* font-weight: 600; */
 	position: absolute;
+	top: 5px;
+}
+
+.title{
+	/* font-weight: 600; */
+	position: absolute;
+	top: 5px;
+	font-weight: 500;
+	font-size: 1.1rem;
 }
 
 
@@ -73,44 +92,63 @@
 	.header__nav__ul--li{
 		font-size: 1rem;
 	}
+	.title_logo{
+		font-size: 1.2rem;
+		left: 100px;
+		
+	}
 	.title{
-		font-size: 1.5rem;
-		top: 20px;
-		left: 150px;
+		left: 500px;
+		padding: 20px;
+        background-color: #dcf2cc;
+        border-radius: 10px;
 	}
 
 }
 
-@media screen and (min-width:668px) and (width < 996px){
+@media screen and (min-width:778px) and (width < 996px){
 	.container__header{
 		padding: 5px;
 	}
 	.header__nav__ul--li{
 		font-size: 0.8rem;
 	}
-	.title{
+	.title_logo{
 		font-size: 1.1rem;
-		top: 50px;
-		left: 150px;
+		top : 0;
+		left: 90px;
+		/* top: 25px;
+		left: 150px; */
+	}
+	.title{
+		left: 400px;
+		padding: 15px;
+        background-color: #dcf2cc;
+        border-radius: 10px;
 	}
 }
 
-@media screen and (width < 668px) {
+@media screen and (width < 778px) {
 	.container__header {
 		padding: 3px;
 	}
 	.header__logo{
-		width: 50px;
+		width: 110px;
+		height: 105px;
 	}
 	.header__nav__ul--li{
 		font-size: 0.75rem;
 		padding-left: 10px;
 		line-height: 17.11px;
 	}
+	.title_logo{
+		font-size: 0.8rem;
+		top : 0;
+		left: 85px;
+	}
 	.title{
-		font-size: 1rem;
-		top: 5px;
-		left: 120px;
+		left: 180px;
+		top : 0;
 	}
 
 }
