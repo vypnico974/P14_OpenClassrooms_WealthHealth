@@ -26,8 +26,13 @@ main {
     justify-content: space-around;
     align-items: center;
 }
-.informationsContainer__firstName, .informationsContainer__lastName{
+.informationsContainer__firstName, .informationsContainer__lastName,
+.informationsContainer__select{
     margin-bottom: 20px;
+}
+
+.informationsContainer__select .select{
+    background-color: rgb(125, 128, 125);
 }
 .adressContainer{
     border: 2px solid #6c8312;
@@ -58,6 +63,11 @@ button:hover{
   transform: scale(1.1);
 }
 
+.selectContainer:hover{
+    background-color: green;
+
+}
+
 @media screen and (min-width: 964px) {
     input{
         width:300px;
@@ -78,9 +88,7 @@ button:hover{
     }
     .btnContainer{
         margin-top:0;
-    }
-
-    
+    }   
 }
 
 @media screen and (max-width: 514px) {
@@ -90,4 +98,28 @@ button:hover{
     input{
         width:100%;
     }
+}
+
+@media screen and (min-width: 956px)  {
+    .informationsContainer__select{
+        width:90%;
+    }   
+}
+
+@media screen and (min-width: 885px) and (width < 964px) {
+    .informationsContainer__select{
+        width:75%;
+    }   
+}
+
+@media screen and (min-width: 700px) and (width < 885px) {
+    .informationsContainer__select{
+        width:90%;
+    }   
+}
+
+@media screen and (max-width: 699px) {
+    .informationsContainer__select{
+        width:100%;
+    }   
 }

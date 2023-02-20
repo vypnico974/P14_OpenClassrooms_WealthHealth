@@ -1,7 +1,9 @@
 /* css  */
-import styles from './listEmployeePage.module.css'
+//import styles from './listEmployeePage.module.css'
 
-
+/* react */
+import * as React from "react"
+//import { useState } from "react";
 
 /**
  * @function ListEmployeePage
@@ -10,10 +12,11 @@ import styles from './listEmployeePage.module.css'
  * @return {HTMLElement} component generated HTML
  */
 export default function ListEmployeePage() {
+
+
   return (
     <main>
-        <h1>List employee Page - TEST</h1>      
-        <p className={styles.error__text}> </p>
+        <h1>List employee Page - TEST</h1> 
     </main>
   )
 }
