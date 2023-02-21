@@ -11,6 +11,9 @@ import 'react-modal-by-vyplasiln/dist/index.css'
 import { statesArray } from "../../data/states"
 import {departmentArray} from "../../data/department"
 
+import { useDispatch } from 'react-redux'
+import { addEmployee } from "../../redux/employee"
+
 
 
 
@@ -23,13 +26,15 @@ import userIcon from '../../assets/user_add.svg'
 
 
 
-/**react-datepicker
+/**CreateEmployeePage
  * @function CreateEmployeePage
  * @export
  * @description Create employee page 
  * @return {HTMLElement} component generated HTML
  */
 export default function CreateEmployeePage() {
+
+    const dispatch = useDispatch()
 
     /* informations - use state */
     const [firstName, setFirstName] = useState("")
@@ -54,10 +59,7 @@ export default function CreateEmployeePage() {
    // console.log("state abbr:",selectedState.abbreviation)
 
 
-   
-   
-  
-    // your modal style 
+       // your modal style 
     const modal_styles = {
       "backgroundColor": "rgb(187 245 193)",   
       "borderRadius": 10,
@@ -77,19 +79,29 @@ export default function CreateEmployeePage() {
         setStartDate(e)
     }
   
+    const reset = () => {
+        document.getElementById("createForm").reset()
+        setDateOfBirth("")
+        setStartDate("")
+    }
 
     const handleSubmit = (event) => {
         event.preventDefault()
 
+        
+
         let currentDateOfBirth = ""
         let currentStartDate = ""
 
+        /*  date format   */
+        let options = {year: 'numeric', month: '2-digit', day: '2-digit'  }
+
         if (dateOfBirth) {
-            currentDateOfBirth = dateOfBirth.toLocaleDateString("en-US")        
+            currentDateOfBirth = dateOfBirth.toLocaleDateString("en-US", options)        
         }
 
         if (startDate) {
-            currentStartDate = startDate.toLocaleDateString("en-US")        
+            currentStartDate = startDate.toLocaleDateString("en-US", options)        
         }
        
         let currentEmployee = {
@@ -100,16 +112,37 @@ export default function CreateEmployeePage() {
             street: street,
             city: city,
             state: selectedState.value,
-            abbreviation: selectedState.abbreviation,
+            stateAbbrev: selectedState.abbreviation,
             zipcode: zipCode,
             department: selectedDepartment.value
         }
         // console.log(dateOfBirth.getDate(2))
         // console.log(dateOfBirth.toLocaleDateString("en-US",options))
 
+        /* add employee store and local storage   */
+        dispatch(addEmployee(currentEmployee))
+
         console.log("employé :",currentEmployee)
 
+        /* currentEmployee reset   */
+        currentEmployee = {
+            firstName: "",
+            lastName: "",
+            dateOfBirth: "",
+            startDate: "",
+            street: "",
+            city: "",
+            state: "",
+            stateAbbrev: "",
+            zipcode: "",
+            department: ""
+        }
+
+
+        console.log("reset currentEmployee :",currentEmployee)
+
         setShowModal(true)
+        reset()
     }
 
 
