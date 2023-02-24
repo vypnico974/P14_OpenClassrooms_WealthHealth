@@ -1,0 +1,39 @@
+.containerFilter{
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.containerShow{
+    display: flex;
+}
+.pShow{
+    margin: 3px;
+}
+
+tbody td {
+    border-spacing: 0;
+}
+
+table {
+    border-spacing: 0;
+    width:100%;
+}
+
+table tr {
+    border: 0;
+}
+
+table tr td {
+    border-left: 0;
+}
+table tr:nth-child(odd){
+    background-color:rgb(238, 238, 238);
+  }
+
+
+table tr:hover {
+    background:rgb(202, 204, 202) ;
+}

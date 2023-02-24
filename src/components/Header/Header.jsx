@@ -1,20 +1,28 @@
 /* react */
 import React from "react"
-import { Link, NavLink } from "react-router-dom"
+import {  NavLink } from "react-router-dom"
+/* prop types */
+import PropTypes from 'prop-types'
 /* css */
 import styles from './header.module.css'
 
 
-export default function Header({picture,linkPicture,arrayNav,formatting}) {
-  /* exemple formatting = "smallHeader"  */
+/**
+  * @function Header
+  * @export
+  * @description  component : header 
+  * @param {string} picture - picture
+  * @param {string} arrayNav - array link (nav)
+  * @param {string} formatting - formatting
+  * @return {HTMLElement} component generated HTML
+*/
+export default function Header({picture,arrayNav,formatting}) {
+ 
   return (
     <header className={`${styles.container__header} ${styles[formatting]}`}>
       { picture &&
-      <Link to={linkPicture} >
-
-        <img className={`${styles.header__logo} ${styles[formatting]}`} src={picture} alt="Logo" />
-      </Link> 
-      }
+       <img className={`${styles.header__logo} ${styles[formatting]}`} src={picture} alt="Logo" />
+       }
       <p className={styles.title_logo}>WEALT HEALTH</p>
       <p className={styles.title}>HRnet   </p>
       <nav>   
@@ -31,4 +39,9 @@ export default function Header({picture,linkPicture,arrayNav,formatting}) {
       </nav>   
     </header>
   )
+}
+Header.prototype = {
+  picture: PropTypes.string,
+  arrayNav: PropTypes.array,
+  formatting: PropTypes.string,
 }

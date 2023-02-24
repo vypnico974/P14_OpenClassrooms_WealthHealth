@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import localStorge from '../data/localStorage'
 
+
 // employee initial state
 const  initialState = {
   employeeList: localStorge.getEmployeeStorage(),
@@ -24,6 +25,7 @@ const employeeSlice = createSlice({
   },
 })
 
+/* export action and reducer   */
 const employeeReducer = employeeSlice.reducer
 const {addEmployee} = employeeSlice.actions
 export { employeeReducer, addEmployee }
