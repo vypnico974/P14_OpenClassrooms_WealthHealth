@@ -45,12 +45,15 @@ export default function Table({ columns, data }) {
       setGlobalFilter,
     } = useTable({
         columns,
+        initialState: { pageIndex: 0 },
       data,
     },
       useGlobalFilter,
       useSortBy,
       usePagination,  // new
     )
+
+    const { pageIndex } = state
 
   // Render the UI for your table
   return (
@@ -127,32 +130,47 @@ export default function Table({ columns, data }) {
     </table>
      {/* pagination */}
      <div className={styles.containerFilter}>
-     <div className="pagination">
-        <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
-          {'<<'}
-        </button>{' '}
-        <button onClick={() => previousPage()} disabled={!canPreviousPage}>
-          {'<'}
-        </button>{' '}
-        <button onClick={() => nextPage()} disabled={!canNextPage}>
-          {'>'}
-        </button>{' '}
-        <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
-          {'>>'}
-        </button>{' '}
-        <span>
-          Showing{' '}
-          <strong>
-            {state.pageIndex + 1} 
-          </strong>
-          {'  '} to   {pageOptions.length} 
-          {'  '} of {'  '}  {preGlobalFilteredRows.length}
-        </span>
-      
-      </div>
+      <div className="pagination">
+          <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
+            {'<<'}
+          </button>{' '}
+          <button onClick={() => previousPage()} disabled={!canPreviousPage}>
+            {'<'}
+          </button>{' '}
+          <button onClick={() => nextPage()} disabled={!canNextPage}>
+            {'>'}
+          </button>{' '}
+          <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
+            {'>>'}
+          </button>{' '}
+          <span className={styles.showing}>
+            Showing{' '}
+            <strong>
+              {state.pageIndex + 1} 
+            </strong>
+            {'  '} to   {pageOptions.length} 
+            {'  '} of {'  '}  {preGlobalFilteredRows.length}
+          </span>
+        </div>
 
-    </div>   
-  </>  
+        <span className={styles.containerGoTo}>
+              <label htmlFor="goto">Go to page: </label>
+              <input
+                id="goto"
+                type="number"
+                min="1"
+                defaultValue={pageIndex + 1}
+                onChange={(e) => {
+                  const pageNumber = e.target.value
+                    ? Number(e.target.value) - 1
+                    : 0;
+                  gotoPage(pageNumber);
+                }}
+                style={{ width: "50px" }}
+              />
+        </span>
+      </div>   
+    </>  
   )
 }
 Table.prototype = {

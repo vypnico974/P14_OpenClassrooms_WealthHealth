@@ -1,53 +1,52 @@
 import App from "../App"
-import { BrowserRouter } from "react-router-dom"
 import { Provider } from "react-redux"
 import { store } from "../redux/store"
 import { render, screen } from '@testing-library/react'
+import { MemoryRouter} from "react-router-dom"
 
-
-const employee_mock = [{
-      id: 1,
-      firstName: "Amanda",
-      lastName: "Linasta",
-      dateOfBirth: "02/04/1980",
-      street: "43 8th Adison",
-      city: "Addison",
-      state: "Alabama",
-      stateAbbrev: "AL",
-      zipCode: "35083",
-      startDate: "02/05/2023",
-      department: "Sales"
-}]
-
-localStorage.setItem("employees", JSON.stringify(employee_mock))
 
 describe("When the URI is \"/\"", () => {
-  test("Display create employee page)", () => {
+  test("Display create  employee page)", () => {
     render(
-      <BrowserRouter>
+      <MemoryRouter initialEntries={["/"]}>
         <Provider store={store}>
           <App />
         </Provider>
-      </BrowserRouter>
+        </MemoryRouter>
     )
     const save = screen.getByText("Save")
     expect(save).toBeInTheDocument()
   })
 })
 
-
-describe("When the URI is \"/list\"", () => {
-  test("Display list of employees (Current Employees)", () => {
-    window.location.assign("/list")
+describe("When the URI is not route \"/testttttt\"", () => {
+  test("Display error page)", () => {
     render(
-      <BrowserRouter location="window.location.href">
+      <MemoryRouter initialEntries={["/testttttt"]}>
         <Provider store={store}>
           <App />
         </Provider>
-      </BrowserRouter>
+        </MemoryRouter>
     )
-   // expect(window.location.pathname === "/list").toBeTruthy()
-    const title = screen.getByText("Current Employees")
-    expect(title).toBeInTheDocument()
+    const noMach = screen.getByText("404")
+    expect(noMach).toBeInTheDocument()
   })
 })
+
+describe("When the URI  is \"/list\"", () => {
+  test("Display list of employees (Current Employees )", () => {
+    render(
+      <MemoryRouter initialEntries={["/list"]}>
+        <Provider store={store}>
+          <App />
+        </Provider>
+        </MemoryRouter>
+    )
+    const home = screen.getByText("Home")
+    expect(home).toBeInTheDocument()
+  })
+})
+
+
+
+

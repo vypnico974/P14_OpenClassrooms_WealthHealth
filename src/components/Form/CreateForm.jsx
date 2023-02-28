@@ -293,10 +293,10 @@ export default function CreateForm() {
             </div> 
 
             <div className={styles.btnContainer}>
-                <button id="form-btn"  type="submit">Save</button>
+                <button id="submit"  type="submit">Save</button>
             </div>      
 
-            <div>
+            <div className={styles.ModalContainer}>
                 {/* <button onClick={() => Toggle()}>
                 Clic to open Modal
                 </button> */}
