@@ -17,7 +17,7 @@ const employee_test = [{
 
 describe("Redux action test",() => {
   
-    test("should create an add employee action", () => {
+    test("should create an add employee action ", () => {
         expect(addEmployee(employee_test)).toEqual({
           type: "add/addEmployee",
           payload: employee_test,
