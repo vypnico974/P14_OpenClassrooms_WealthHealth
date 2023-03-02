@@ -22,14 +22,14 @@ export default function ListEmployeePage() {
 
   //// Use Selector for extract: employee (state)
   const employeState = useSelector(selectEmployees)
-  //console.log(employeState.employeeList)
+  console.log("state employee:",employeState)
     
   const columns = React.useMemo(
     () => employeeColumns, []
   )
 
   const data = 
-    React.useMemo(() => employeState.employeeList, [employeState.employeeList])
+    React.useMemo(() => employeState, [employeState])
 
 
   return (

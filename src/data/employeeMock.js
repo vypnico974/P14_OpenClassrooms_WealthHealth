@@ -1,4 +1,4 @@
-[
+export const employeeMoock = [
     {
       "id": 1,
       "firstName": "Amanda",

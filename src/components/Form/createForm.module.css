@@ -1,6 +1,7 @@
 .createForm{
     display: flex;
     flex-wrap: wrap;
+    margin-top: 20px;
     /* gap: 0 20px; */
 }
 .informationsContainer, .adressContainer, .departmentContainer{
