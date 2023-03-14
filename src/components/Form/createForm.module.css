@@ -1,6 +1,16 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .createForm{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin-top: 20px;
     /* gap: 0 20px; */
 }
@@ -8,11 +18,20 @@
     min-width: 270px;
     width:33%;
     padding:10px; 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .informationsContainer__firstName, .informationsContainer__lastName,
 .informationsContainer__select{
@@ -21,11 +40,13 @@
 
 .informationsContainer__select .select{
     background-color: rgb(125, 128, 125);
+    width:100%;
     
 }
 
 .informationsContainer__select div{
     border-radius: 0;
+    cursor: pointer;
 }
 
 .adressContainer{
@@ -34,8 +55,11 @@
     margin-left: 5px;
 }
 .btnContainer{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     margin-top:30px;
 }
 
@@ -48,13 +72,17 @@
     border: none;
     padding: 1rem 2rem;
     margin: 2rem 0;
-    box-shadow: 0rem 0.2rem 0.5rem 0.1rem #d5d5d5;
+    -webkit-box-shadow: 0rem 0.2rem 0.5rem 0.1rem #d5d5d5;
+            box-shadow: 0rem 0.2rem 0.5rem 0.1rem #d5d5d5;
     /* background: #9356dc; */
+    background: -o-linear-gradient(100deg, #012611 25%, #6c8312 100%);
     background: linear-gradient(-10deg, #012611 25%, #6c8312 100%);
 }
 
 button:hover{
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 /* .selectContainer:hover{
@@ -76,9 +104,14 @@ button:hover{
 }
 @media screen and (max-width: 550px) {
     .createForm{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     .btnContainer{
         margin-top:0;

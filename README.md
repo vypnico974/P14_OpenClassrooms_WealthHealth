@@ -1,4 +1,4 @@
-# P14 OpenClassrooms Wealth Health
+# P14 OpenClassrooms Wealth Health - solution nr 1
 
 ![Author](<https://img.shields.io/badge/Author-Nicolas%20Vyplasil-green>)   
 
@@ -33,6 +33,26 @@ Nous voulons également mesurer des données quantifiables (ex. : temps de charg
 
 Penses bien à faire un build de l'application avant de faire ton audit. Ça impactera grandement les performances de ton application
 
+
+## Solution nr 1
+
+La solution nr 1 est réalisée essentiellement par l'utiliation de librairies.
+L’application HRnet avec React fonctionne de la même manière que dans sa
+version originale, avec un formulaire qui permet aux utilisateurs de créer de
+nouveaux enregistrements d'employés et une vue qui répertorie les employés
+actuels. Pour le formulaire de création de nouveaux enregistrement, je propose
+plusieurs améliorations possible qui sont actuellement désactivées (en commentaire) : 
+- champs obligatoires
+- règle de saisies
+- remise à zéro du formulaire après création
+
+Pour [solution nr 2](https://github.com/vypnico974/P14_OpenClassrooms_WealthHealth_V2) 
+utilisation de composants personnalisés au lieu des librairies :
+ - react-table
+ - react-datepicker
+ - react-select
+
+
 ## Prérequis
 
 - [NodeJS (version16.13.2)](https://nodejs.org/en/)
@@ -55,18 +75,24 @@ Penses bien à faire un build de l'application avant de faire ton audit. Ça imp
 
 # Installation 
 
-- Clone ce rélertoire :
+- Cloner ce répertoire :
     git clone https://github.com/vypnico974/P14_OpenClassrooms_WealthHealth.git
 - Après clonage, installatons des dépendances par npm ou yarn :
-    - avec npm :
-    npm i (ou npm install)
-    - avec yarn :
-    yarn (ou yarn install)
-- lancer l'application :  
-    - avec npm :
-    npm start
-    - avec yarn :
-    yarn start
+    - avec npm : npm i (ou npm install)
+    - avec yarn :yarn (ou yarn install)
+- Excécuter l'application :  
+    - avec npm :npm start
+    - avec yarn : yarn start
+- Pour créer une version de production : 
+  - avec npm : npm run build 
+  - avec yarn : yarn run build
+- Excécuter une version de production :
+  - avec npm :
+   - npm install -g serve
+   - serve -s build
+  - avec yarn : 
+   - yarn install -g serve
+   - serve -s build
 
 
 # Installation  (English version)
@@ -74,12 +100,23 @@ Penses bien à faire un build de l'application avant de faire ton audit. Ça imp
 - Clone this repository :
     git clone https://github.com/vypnico974/P14_OpenClassrooms_WealthHealth.git
 - Package installations after cloning, npm or yarn :
-    - with npm :
-    npm i (or npm install)
-    - with yarn :
-    yarn (or yarn install)
+    - with npm : npm i (or npm install)
+    - with yarn : yarn (or yarn install)
 - Run the FrontEnd :  
-    - with npm :
-    npm start
-    - with yarn :
-    yarn start
+    - with npm : npm start
+    - with yarn : yarn start
+- To create and run a production build : 
+   - with npm : 
+     - npm run build
+     - npm install -g serve
+     - serve -s build
+   - with yarn : 
+     - yarn run build
+     - yarn install -g serve
+     - serve -s build
+
+
+
+![logo](https://raw.githubusercontent.com/vypnico974/7697016-Front-End/master/images/create_employee.png)
+
+![logo](https://raw.githubusercontent.com/vypnico974/7697016-Front-End/master/images/list_employee.png)

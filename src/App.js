@@ -13,7 +13,6 @@ import './styles/global.css'
 /* logo */
 import logoHeader from "./assets/Wealth_Health_logo.webp"
 
-
 const arrayNav = [{ linkNav: "/", titleNav: "Create Employee" },
                   { linkNav: "/list", titleNav: "View Current Employees" }]
 

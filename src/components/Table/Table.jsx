@@ -148,8 +148,8 @@ export default function Table({ columns, data }) {
             <strong>
               {state.pageIndex + 1} 
             </strong>
-            {'  '} to   {pageOptions.length} 
-            {'  '} of {'  '}  {preGlobalFilteredRows.length}
+            {'  '} to   {pageOptions.length} {'  '} page
+            {'  '} of {'  '}  {preGlobalFilteredRows.length} entries
           </span>
         </div>
 
@@ -177,5 +177,3 @@ Table.prototype = {
   columns: PropTypes.array.isRequired,
   data: PropTypes.object.isRequired,
 }
-
-

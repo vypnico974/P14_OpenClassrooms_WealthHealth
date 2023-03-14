@@ -30,4 +30,3 @@ const employeeSlice = createSlice({
 const employeeReducer = employeeSlice.reducer
 const {addEmployee} = employeeSlice.actions
 export { employeeReducer, addEmployee }
-

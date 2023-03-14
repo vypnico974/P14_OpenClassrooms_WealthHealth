@@ -27,7 +27,7 @@ export const employeeColumns = [
           },
           {
             Header: 'State',
-            accessor: 'state',
+            accessor: 'stateAbbrev',
           },
           {
             Header: 'Zip Code',

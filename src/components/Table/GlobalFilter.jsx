@@ -1,12 +1,19 @@
+/* react  */
 import React from "react"
+/*  react-table  */
 import { useAsyncDebounce } from 'react-table' 
 
-// Define a default UI for filtering
+
+/**
+  * @function GlobalFilter
+  * @export
+  * @description  Define a default UI for filtering 
+*/
 export default function GlobalFilter({
   preGlobalFilteredRows,
   globalFilter,
   setGlobalFilter,
-}) {
+  }) {
   const count = preGlobalFilteredRows.length
   const [value, setValue] = React.useState(globalFilter)
   /* The useAsyncDebounce is used to add a little delay to avoid
@@ -24,7 +31,7 @@ export default function GlobalFilter({
           setValue(e.target.value);
           onChange(e.target.value);
         }}
-        placeholder={`${count} records...`}
+        placeholder={`${count} entries....`}
       />
     </span>
   )

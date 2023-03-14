@@ -1,11 +1,9 @@
 /* react */
-import * as React from "react"
-/* form */
+import React from "react"
+/* form component */
 import CreateForm from "../../components/Form/CreateForm"
 
-
-
-/**CreateEmployeePage
+/**
  * @function CreateEmployeePage
  * @export
  * @description Create employee page 
