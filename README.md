@@ -19,7 +19,7 @@ Cette société utilise une application web interne, appelée HRnet, qui gère l
 - Convertir l'un des quatre plugins jQuery actuels en React. Remplacer les 3 plugins jQuery restants par des composants React que tu coderas toi-même, ou que tu peux - - importer depuis des libraires existantes si tu manques de temps. 
 - Effectuer des tests de performance Lighthouse en comparant l'ancienne et la nouvelle application.
 
-Voici le [repo HRnet actuel](https://github.com/OpenClassrooms-Student-Center/P12_Front-end)).
+Voici le [repo HRnet actuel](https://github.com/OpenClassrooms-Student-Center/P12_Front-end).
 N'oublie pas que toute l'application HRNet doit être convertie en React : 
 - Tu devras faire une nouvelle version des pages "Create Employee" et "Employee List" avec React.
 - Tu devras ajouter un système de gestion d'état (la version actuelle utilise un stockage local).
@@ -36,15 +36,18 @@ Penses bien à faire un build de l'application avant de faire ton audit. Ça imp
 
 ## Solution nr 1
 
-La solution nr 1 est réalisée essentiellement par l'utiliation de librairies.
+La solution nr 1 est réalisée essentiellement par l'utilisation de librairies.
 L’application HRnet avec React fonctionne de la même manière que dans sa
 version originale, avec un formulaire qui permet aux utilisateurs de créer de
 nouveaux enregistrements d'employés et une vue qui répertorie les employés
 actuels. Pour le formulaire de création de nouveaux enregistrement, je propose
-plusieurs améliorations possible qui sont actuellement désactivées (en commentaire) : 
+plusieurs améliorations possible qui sont actuellement désactivées (en commentaire dans le code ) : 
 - champs obligatoires
 - règle de saisies
-- remise à zéro du formulaire après création
+- remise à zéro du formulaire après création d'un employé
+
+ Lien vers le site : [solution nr 1](https://vypnico974.github.io/P14_OpenClassrooms_WealthHealth/) 
+
 
 Pour [solution nr 2](https://github.com/vypnico974/P14_OpenClassrooms_WealthHealth_V2) 
 utilisation de composants personnalisés au lieu des librairies :
@@ -52,8 +55,14 @@ utilisation de composants personnalisés au lieu des librairies :
  - react-datepicker
  - react-select
 
- Lien vers le site : [solution nr 1](https://vypnico974.github.io/P14_OpenClassrooms_WealthHealth/)  
 
+
+Remarque : 
+ Une mise à jour récente de la documentation officielle de React [ici](https://react.dev/learn/start-a-new-react-project) recommande de ne plus utiliser CRA (Create React App) mais de choisir l’un des frameworks optimisés par React populaires dans la communauté.
+Par conséquent, je propose également la solution nr 1 migré Vite.
+Vite est un outil de construction de projet ultra-rapide, qui prend en charge plusieurs types de fichiers et est optimisé pour les projets modernes basés sur des frameworks tels que React. 
+
+Lien du [repot solution nr 1 migré Vite](https://github.com/vypnico974/P14_migration_Vite)
 
 ## Prérequis
 
@@ -90,11 +99,11 @@ utilisation de composants personnalisés au lieu des librairies :
   - avec yarn : yarn run build
 - Excécuter une version de production :
   - avec npm :
-   - npm install -g serve
-   - serve -s build
+    - npm install -g serve
+    - serve -s build
   - avec yarn : 
-   - yarn install -g serve
-   - serve -s build
+    - yarn install -g serve
+    - serve -s build
 
 
 # Installation  (English version)
