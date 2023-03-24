@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/P14_OpenClassrooms_WealthHealth/static/css/main.e0b375c0.css",
-    "main.js": "/P14_OpenClassrooms_WealthHealth/static/js/main.b6021630.js",
-    "static/css/719.51e4541f.chunk.css": "/P14_OpenClassrooms_WealthHealth/static/css/719.51e4541f.chunk.css",
-    "static/js/719.4b43c701.chunk.js": "/P14_OpenClassrooms_WealthHealth/static/js/719.4b43c701.chunk.js",
-    "static/css/332.bd272cb8.chunk.css": "/P14_OpenClassrooms_WealthHealth/static/css/332.bd272cb8.chunk.css",
-    "static/js/332.7ad20e2f.chunk.js": "/P14_OpenClassrooms_WealthHealth/static/js/332.7ad20e2f.chunk.js",
-    "static/js/787.5fc84806.chunk.js": "/P14_OpenClassrooms_WealthHealth/static/js/787.5fc84806.chunk.js",
-    "static/js/358.b32b2080.chunk.js": "/P14_OpenClassrooms_WealthHealth/static/js/358.b32b2080.chunk.js",
-    "static/media/Wealth_Health_logo.webp": "/P14_OpenClassrooms_WealthHealth/static/media/Wealth_Health_logo.2cb728068edfa774f91a.webp",
-    "index.html": "/P14_OpenClassrooms_WealthHealth/index.html",
-    "main.e0b375c0.css.map": "/P14_OpenClassrooms_WealthHealth/static/css/main.e0b375c0.css.map",
-    "main.b6021630.js.map": "/P14_OpenClassrooms_WealthHealth/static/js/main.b6021630.js.map",
-    "719.51e4541f.chunk.css.map": "/P14_OpenClassrooms_WealthHealth/static/css/719.51e4541f.chunk.css.map",
-    "719.4b43c701.chunk.js.map": "/P14_OpenClassrooms_WealthHealth/static/js/719.4b43c701.chunk.js.map",
-    "332.bd272cb8.chunk.css.map": "/P14_OpenClassrooms_WealthHealth/static/css/332.bd272cb8.chunk.css.map",
-    "332.7ad20e2f.chunk.js.map": "/P14_OpenClassrooms_WealthHealth/static/js/332.7ad20e2f.chunk.js.map",
-    "787.5fc84806.chunk.js.map": "/P14_OpenClassrooms_WealthHealth/static/js/787.5fc84806.chunk.js.map",
-    "358.b32b2080.chunk.js.map": "/P14_OpenClassrooms_WealthHealth/static/js/358.b32b2080.chunk.js.map"
+    "main.css": "/static/css/main.e0b375c0.css",
+    "main.js": "/static/js/main.462c4927.js",
+    "static/css/719.51e4541f.chunk.css": "/static/css/719.51e4541f.chunk.css",
+    "static/js/719.4b43c701.chunk.js": "/static/js/719.4b43c701.chunk.js",
+    "static/css/332.bd272cb8.chunk.css": "/static/css/332.bd272cb8.chunk.css",
+    "static/js/332.7ad20e2f.chunk.js": "/static/js/332.7ad20e2f.chunk.js",
+    "static/js/787.5fc84806.chunk.js": "/static/js/787.5fc84806.chunk.js",
+    "static/js/358.b32b2080.chunk.js": "/static/js/358.b32b2080.chunk.js",
+    "static/media/Wealth_Health_logo.webp": "/static/media/Wealth_Health_logo.2cb728068edfa774f91a.webp",
+    "index.html": "/index.html",
+    "main.e0b375c0.css.map": "/static/css/main.e0b375c0.css.map",
+    "main.462c4927.js.map": "/static/js/main.462c4927.js.map",
+    "719.51e4541f.chunk.css.map": "/static/css/719.51e4541f.chunk.css.map",
+    "719.4b43c701.chunk.js.map": "/static/js/719.4b43c701.chunk.js.map",
+    "332.bd272cb8.chunk.css.map": "/static/css/332.bd272cb8.chunk.css.map",
+    "332.7ad20e2f.chunk.js.map": "/static/js/332.7ad20e2f.chunk.js.map",
+    "787.5fc84806.chunk.js.map": "/static/js/787.5fc84806.chunk.js.map",
+    "358.b32b2080.chunk.js.map": "/static/js/358.b32b2080.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e0b375c0.css",
-    "static/js/main.b6021630.js"
+    "static/js/main.462c4927.js"
   ]
 }
